@@ -1,0 +1,111 @@
+/**
+* Name: Quenilyn A. Tabar
+* Section: IT Dept
+* Year: 4th Year
+*/
+
+
+import java.util.Scanner;
+
+public class CasaPinoyResto {
+
+    public static void main(String[] args) {
+
+        Scanner console = new Scanner(System.in);
+
+
+        int Order, Menu, Snacks, Beverages, output = 0;
+        double price, total = 0;
+
+
+        System.out.println("WELCOME, Do you want to order? [1-Yes], [2-No]  ");
+        System.out.print("Enter the number: ");
+        Order = console.nextInt();
+        Scanner a = new Scanner(System.in);
+
+
+        do {
+            if (Order == 1) {
+                System.out.println("----------------------------");
+                System.out.println(" Menu: ");
+                System.out.println("[1] - Crispy Pata - P90.00");
+                System.out.println("[2] - Special Bulalo - P150.00");
+                System.out.println("[3] - Chopsuey - P80.00");
+                System.out.print("Choose your order:");
+                Menu = a.nextInt();
+                System.out.println("----------------------------");
+
+
+                System.out.println(" Snacks ");
+                System.out.println("[1] - Corndog and Fries - P100.00");
+                System.out.println("[2] - Hawaiian Burger - P50.00");
+                System.out.println("[3] - Mexican Tacos - P50.00");
+                System.out.print("Choose your order: ");
+                Snacks = a.nextInt();
+                System.out.println("----------------------------");
+
+
+                System.out.println("Beverages: ");
+                System.out.println("[1] - Lemonade - P35.00");
+                System.out.println("[2] - Mild Beer - P40.00");
+                System.out.println("[3] - Softdrinks - P20.00");
+                System.out.print("Choose your order: ");
+                Beverages = a.nextInt();
+                System.out.println("----------------------------");
+
+
+
+                if (Menu == 1) {
+                    price = 90.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Crispy Pata" + " = " + price);
+                } else if (Menu == 2) {
+                    price = 150.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Special Bulalo" + " = " + price);
+                } else if (Menu == 3) {
+                    price = 80.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Chopsuey" + " = " + price);
+                }
+
+                if (Snacks == 1) {
+                    price = 100.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Corndog and Fries" + " = " + price);
+                } else if (Snacks == 2) {
+                    price = 50.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Hawaiian Burger" + " = " + price);
+                } else if (Snacks == 3) {
+                    price = 50.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Mexican Tacos" + " = " + price);
+                }
+
+                if (Beverages == 1) {
+                    price = 35.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Lemonade" + " = " + price);
+                } else if (Beverages == 2) {
+                    price = 40.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Mild Beer" + " = " + price);
+                } else if (Beverages == 3) {
+                    price = 20.00;
+                    total = price + total;
+                    System.out.println(" You ordered: Softdrinks" + " = " + price);
+                
+                }
+
+                System.out.println("Total Price: " + total);
+                System.out.print("You want to order again: [1] - Yes / [2] - No: ");
+                output = a.nextInt();
+
+            }
+        }while (output == 1) ;
+
+                 System.out.println("THANK YOU FOR BUYING!");
+
+    }
+}
