@@ -1,0 +1,46 @@
+/**
+* Name: Quenilyn A. Tabar
+* Section: IT Dept
+* Year: 4th Year
+*/
+
+
+import java.util.Scanner;
+class GRADES {
+
+    public static void main(String[] args) {
+        Scanner qt = new Scanner(System.in);
+
+        String input;
+        int Score;
+        int Grades = 0;
+        int Output;
+        int TotalScore = 0;
+
+
+        do {
+            System.out.println("Are you sure to input a grade? ");
+            System.out.print("[Yes] or [No]?:");
+            input = qt.nextLine();
+            Output = 0;
+           
+           
+            if (input.equalsIgnoreCase("yes")) {
+                Output += 1;
+                System.out.println("Enter Grades: ");
+                Score = qt.nextInt();
+                qt.nextLine();
+                Grades += Score;
+                TotalScore += 1;
+
+            } else if (input.equalsIgnoreCase("no")) {
+                int Total_Averages_Grades = Grades / TotalScore;
+                Output += 0;
+                System.out.println("Overall Average: " + Total_Averages_Grades);
+            }
+        } while (Output == 1);
+        
+        
+        System.out.println("DESERVE!");
+    }
+}
